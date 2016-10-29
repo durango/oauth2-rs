@@ -51,7 +51,7 @@ impl Config {
             pairs.push(("redirect_uri", &self.redirect_url));
         }
         let mut url = self.auth_url.clone();
-        url.query_pairs_mut().clear().extend_pairs(
+        url.query_pairs_mut().extend_pairs(
             pairs.iter().map(|&(k, v)| { (k, &v[..]) })
         );
         return url;
