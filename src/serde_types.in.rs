@@ -1,4 +1,4 @@
-#[derive(Deserialize, Debug, Clone, PartialEq, Eq, Ord, PartialOrd)]
+#[derive(Default, Deserialize, Debug, Clone, PartialEq, Eq, Ord, PartialOrd)]
 pub struct Token {
     #[serde(default)]
     pub access_token: String,
